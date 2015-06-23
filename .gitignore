@@ -1,0 +1,13 @@
+/vendor
+/node_modules
+/bower_components
+/public/bower_components
+.env
+.idea
+.idea/
+/public/js
+/public/css
+/public/fonts
+/public/build
+/public/assets/
+composer.phar
