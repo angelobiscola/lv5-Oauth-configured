@@ -11,8 +11,8 @@
         "pingpong/modules": "~2.0",
         "pingpong/generators": "~2.0",
         "artesaos/defender": "^0.2.0@dev",
-        "laravelcollective/html": "5.1.*"
-
+        "laravelcollective/html": "5.1.*",
+        "guzzlehttp/guzzle": "~4.0|~5.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
