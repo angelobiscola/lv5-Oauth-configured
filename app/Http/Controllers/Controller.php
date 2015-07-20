@@ -9,4 +9,9 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 abstract class Controller extends BaseController
 {
     use DispatchesJobs, ValidatesRequests;
+
+    public function missingMethod($parameters = array())
+    {
+        return view('errors.404');
+    }
 }
