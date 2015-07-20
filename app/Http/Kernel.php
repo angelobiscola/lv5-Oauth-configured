@@ -17,7 +17,8 @@ class Kernel extends HttpKernel
         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \App\Http\Middleware\VerifyCsrfToken::class,
+        //\App\Http\Middleware\VerifyCsrfToken::class,
+        \LucaDegasperi\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware::class
     ];
 
     /**
@@ -32,6 +33,10 @@ class Kernel extends HttpKernel
         // Controle de acesso usando permissões
         'needsPermission' => \Artesaos\Defender\Middlewares\NeedsPermissionMiddleware::class,
         // Controle de acesso mais simples, utiliza apenas os grupos
-        'needsRole'       => \Artesaos\Defender\Middlewares\NeedsRoleMiddleware::class
+        'needsRole'       => \Artesaos\Defender\Middlewares\NeedsRoleMiddleware::class,
+
+        'oauth' => \LucaDegasperi\OAuth2Server\Middleware\OAuthMiddleware::class,
+        'oauth-owner' => \LucaDegasperi\OAuth2Server\Middleware\OAuthOwnerMiddleware::class,
+        //'check-authorization-params' => \LucaDegasperi\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware::class
     ];
 }

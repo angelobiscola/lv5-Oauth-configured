@@ -150,7 +150,9 @@ return [
         Pingpong\Modules\ModulesServiceProvider::class,
         Pingpong\Generators\GeneratorsServiceProvider::class,
         Artesaos\Defender\Providers\DefenderServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class
+        Collective\Html\HtmlServiceProvider::class,
+        LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
+        LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
     ],
 
     /*
@@ -206,6 +208,7 @@ return [
         'Defender'  => Artesaos\Defender\Facades\Defender::class,
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
+        'Authorizer'=> LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
     ],
 
 ];
