@@ -6,7 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Laravel</title>
 
-	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+	{{--<link href="{{ asset('/css/app.css') }}" rel="stylesheet">--}}
+
+    <!--material-desing-->
+    <link href="{{ asset('/bower_components/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('/bower_components/bootstrap-material-design/dist/css/material.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bower_components/bootstrap-material-design/dist/css/ripples.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bower_components/bootstrap-material-design/dist/css/roboto.min.css') }}" rel="stylesheet">
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -56,7 +63,12 @@
 	@yield('content')
 
 	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="{{asset("/bower_components/jquery/dist/jquery.min.js")}}"></script>
+
+    <!--material-desing-->
+    <script src="{{asset("/bower_components/bootstrap-material-design/dist/js/material.min.js")}}"></script>
+    <script src="{{asset("/bower_components/bootstrap-material-design/dist/js/ripples.min.js")}}"></script>
+
+	<script src="{{asset("/bower_components/bootstrap/dist/js/bootstrap.min.js")}}"></script>
 </body>
 </html>
