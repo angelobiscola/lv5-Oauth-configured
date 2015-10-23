@@ -27,6 +27,7 @@ Route::group(['prefix' =>'api', 'middleware' => 'oauth'], function(){
     Route::get('home', 'HomeController@index');
 });
 
+
 Route::post('oauth/access_token', function() {
 
     return Response::json(Authorizer::issueAccessToken());
